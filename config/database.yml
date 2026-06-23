@@ -1,0 +1,26 @@
+# PostgreSQL configuration
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+  host: <%= ENV.fetch("DATABASE_HOST", "localhost") %>
+  port: <%= ENV.fetch("DATABASE_PORT", "5432") %>
+  username: <%= ENV.fetch("DATABASE_USERNAME", "") %>
+  password: '<%= ENV.fetch("DATABASE_PASSWORD", "") %>'
+
+development:
+  <<: *default
+  database: erabaki_komunikatik_development
+
+test:
+  <<: *default
+  database: erabaki_komunikatik_test<%= ENV.fetch("TEST_ENV_NUMBER", "") %>
+
+production:
+  <<: *default
+  host: <%= ENV.fetch("DATABASE_HOST", "127.0.0.1") %>
+  port: <%= ENV.fetch("DATABASE_PORT", "5432") %>
+  database: <%= ENV.fetch("DATABASE_NAME", "erabaki_komunikatik") %>
+  username: <%= ENV.fetch("DATABASE_USERNAME", "erabaki_komunikatik") %>
+  password: '<%= ENV.fetch("DATABASE_PASSWORD", "") %>'

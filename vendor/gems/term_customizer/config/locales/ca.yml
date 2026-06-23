@@ -1,0 +1,136 @@
+---
+ca:
+  activemodel:
+    attributes:
+      constraint:
+        component_id: Component
+        subject_id: Espai participatiu
+        subject_manifest: Tipus d'espai participatiu
+      translation:
+        key: Clau de traducció
+        value: Terme personalitzat
+      translation_set:
+        name: Nom
+      translations_import:
+        file: Importa un fitxer
+    errors:
+      models:
+        translations_import:
+          attributes:
+            file:
+              invalid_mime_type: 'Tipus de document no vàlid. Els formats acceptats són: %{valid_mime_types}'
+  decidim:
+    term_customizer:
+      admin:
+        actions:
+          add_multiple_translations: Afegir múltiples
+          back: Enrere
+          cancel: Cancel·lar
+          clear_cache: Clear cache
+          confirm_duplicate: Esteu segur de voler duplicar aquest conjunt?
+          duplicate: Duplicar
+          help: Ajuda
+          import: Importar
+          new_translation: Nova traducció
+          new_translation_set: Nou set/joc de traducció
+          title: Actions
+          view: Visualitza
+        add_translations:
+          index:
+            add: Afegir
+            help_html: Comença per posar un parell de lletres que apareixin en el terme que vulguis traduir. Espera uns segons i veuràs que es desplega una llista de totes les traduccions que contenen la teva cerca. Clica en aquelles traduccions que vulguis traduir. Aquestes paraules i/o frases s'afageixen i es guarden dins el conjunt que has creat prèviament. </p> <p>Una vegada tinguis totes les frases i/o paraules, clica a el "%{button_name}" botó que està sota de les frases.</p>
+            help_title: Com cercar traduccions?
+            search: Buscar
+        caches:
+          clear:
+            success: Cache cleared successfully
+        models:
+          translation_sets:
+            fields:
+              name: Nom
+          translations:
+            fields:
+              key: Clau de traducció
+              original_term: Terme original
+              term: Terme personalitzat
+        titles:
+          add_multiple_translations: Afegir múltiples
+          translation_sets: Sets/Jocs de traducció
+          translations: Traduccions
+        translation_sets:
+          constraint_fields:
+            constraint: Obligatori
+            remove: Eliminar
+          create:
+            error: Error en crear la traducció
+            success: Traducció creada amb èxit
+          destroy:
+            success: La traducció ha estat esborrada amb èxit.
+          duplicate:
+            copied_set_name: Còpia de %{name}
+            error: Error en la duplicació del conjunt de traduccions.
+            success: El conjunt de traduccions s'ha duplicat amb èxit.
+          edit:
+            save: Guardar
+            title: Set/Joc de traducció
+          form:
+            add_constraint: Afegir restricció
+            constraint_help_html: <p> Les restriccions són regles específiques que us permeten aplicar les personalitzacions en un conjunt a un context específic. </p> <p> En cas que no definiu cap regla de restricció, les personalitzacions d'aquest conjunt s'aplicaran a tota l'aplicació. D'altra banda, si voleu que les personalitzacions d'aquest conjunt només s'apliquin a un procés concret, seleccioneu "Processos participatius" com a tipus d'espai participatiu i el procés objectiu com a espai participatiu. A més, també podeu aplicar les personalitzacions a un component específic definint el component per a la restricció. </p> <p> Si definiu diverses restriccions, les personalitzacions s'aplicaran en aquestes. </p>
+            constraint_help_title: Què són les restriccions?
+            help_html: <p>Un conjunt de traduccions és un "conjunt" que conté les traduccions d'un context específic que voleu personalitzar.</p> <p>Els conjunts de traduccions us ajuden a personalitzar el vocabulari i aplicar-les a diferents contextos. Això us permet personalitzar la mateixa traducció de manera diferent en diferents contextos.</p> <p>Per exemple, si voleu personalitzar un botó amb el terme "Afegeix" de manera diferent per a diferents processos de participació, podeu crear conjunts de traduccions separats per a tots dos processos i aplicar el conjunt en els processos mitjançant les restriccions.</p>
+            help_title: Què és un conjunt de traduccions?
+            title: Set/Joc de traducció
+          index:
+            no_records_html: <p>No hi ha cap conjunt de traduccions disponible.</p> <p>Comenceu afegint un conjunt de traduccions des del botó "<a href="%{new_set_link}">%{button_name}</a>".</p>
+          new:
+            create: Crear
+            title: Sets/Jocs de traduccions
+          update:
+            error: Error en l'actualització de la traducció
+            success: Set/Joc de traducció actualitzada amb èxit
+        translations:
+          create:
+            error: Error en crear la traducció
+            success: Traducció creada amb èxit
+          destroy:
+            success: La traducció ha estat esborrada amb èxit
+          edit:
+            save: Guardar
+            title: Traducció
+          form:
+            help_html: <p>Una clau de traducció és una referència tècnica de la paraula i/o frase que s'ha de traduir. Aquest no és el terme que voleu canviar, sinó la clau tècnica que fa referència a aquesta traducció.</p> <p>Per exemple, si voleu canviar el terme <em>"Processos"</em> al menú superior, utilitzareu la clau <em>"decidim.menu.processes"</em>.</p> <p><a href="https://guides.rubyonrails.org/i18n.html" target=" _blank"> Més informació sobre la internacionalització de Rails</a>.</p>
+            help_title: Què és una clau de traducció?
+            term_help_html: "<p>El terme personalitzat és la paraula final que voleu que aparegui a la IU en lloc del terme original. Evidentment, el terme personalitzat pot variar per a cada idioma habilitat.</p>"
+            term_help_title: Què és un terme personalizat?
+            title: Traducció
+          import:
+            error: Error en l'importació de traduccions
+            success: Èxit en l'importació de traducció.
+          index:
+            actions: Accions
+            no_records_html: <p>No hi ha traduccions disponibles en aquest conjunt.</p> <p>Comenceu afegint traduccions per aquest conjunt. La manera més senzilla és utilitzar el botó "<a href="%{add_multiple_link}">%{button_name}</a>" on pots cercar traduccions amb els mateixos termes que veus a la IU.</p>
+            selected: selecciona
+          new:
+            create: Crear
+            title: Traduccions
+          new_import:
+            accepted_mime_types:
+              csv: CSV
+              json: JSON
+              xlsx: XLSX
+            file_legend: 'Afegiu un fitxer d''importació que s''analitzarà per a les traduccions. Els formats admesos són: %{valid_mime_types}'
+            start_import: Començar importació
+            title: Importa les traduccions
+            zip_hint: També podeu carregar el fitxer ZIP des de l'exportació de traduccions.
+          update:
+            error: Error en l'actualització de la traducció.
+            success: Traducció actualitzada amb èxit.
+        translations_destroys:
+          destroy:
+            error: Error en l'eliminiació de les traduccions.
+            success: Les traduccions han estat esborrades amb èxit.
+          new:
+            destroy: Eliminar
+            title: Traduccions eliminades
+      menu:
+        term_customizer: Personalització de termes

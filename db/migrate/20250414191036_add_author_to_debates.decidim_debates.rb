@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+# This migration comes from decidim_debates (originally 20180118132243)
+# This file has been modified by `decidim upgrade:migrations` task on 2026-01-30 22:05:21 UTC
+class AddAuthorToDebates < ActiveRecord::Migration[5.1]
+  def change
+    add_column :decidim_debates_debates, :decidim_author_id, :integer
+  end
+end

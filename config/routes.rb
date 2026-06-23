@@ -1,0 +1,29 @@
+Rails.application.routes.draw do
+  # Localized route for decidim-awesome admin engine
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    mount Decidim::DecidimAwesome::AdminEngine => "/admin/decidim_awesome", as: :localized_decidim_admin_decidim_awesome
+  end
+
+  # Localized route for decidim-term_customizer admin engine
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    mount Decidim::TermCustomizer::AdminEngine => "/admin/term_customizer", as: :localized_decidim_admin_term_customizer
+  end
+
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
+  mount Decidim::Core::Engine => '/'
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
+  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  get "up" => "rails/health#show", as: :rails_health_check
+
+  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
+  # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
+  # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
+
+  # Defines the root path route ("/")
+  # root "posts#index"
+end

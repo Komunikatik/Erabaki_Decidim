@@ -1,0 +1,468 @@
+it:
+  activemodel:
+    attributes:
+      config:
+        allow_images_in_proposals: Consenti l'uso d'immagini nell'editor di proposte
+        auto_save_forms: Salva automaticamente i moduli nel LocalStorage
+        intergram_auto_no_response: Un messaggio che viene inviato un minuto dopo che l'utente invia il suo primo messaggio e che non è stata ricevuta risposta
+        intergram_auto_response: Un messaggio che viene inviato immediatamente dopo che l'utente invia il primo messaggio
+        intergram_chat_id: Chat ID
+        intergram_color: Colore del widget
+        intergram_for_admins: Abilita la chat Intergram nel backend di amministrazione
+        intergram_intro_message: Primo messaggio quando l'utente apre la chat per la prima volta
+        intergram_require_login: Solo per gli utenti registrati
+        intergram_title_closed: Titolo chat chiusa
+        intergram_title_open: Titolo della chat aperta
+        intergram_use_floating_button: Se selezionato, la chat chiusa è sempre un pulsante invece di un testo
+        proposal_custom_fields: Campi personalizzati %{id}
+        scoped_admins: Gruppo di amministratori con ambito %{id}
+        scoped_styles: Stili personalizzati %{id}
+        validate_body_max_caps_percent: Percentuale massima consentita di lettere maiuscole per il corpo
+        validate_body_max_marks_together: Numero massimo di simboli consecutivi ammessi nel corpo
+        validate_body_min_length: Caratteri minimi necessari per il corpo
+        validate_body_start_with_caps: Obbliga il corpo del testo con una lettera maiuscola
+        validate_title_max_caps_percent: Percentuale massima consentita di lettere maiuscole per il titolo
+        validate_title_max_marks_together: Numero massimo di simboli consecutivi ammessi nel titolo
+        validate_title_min_length: Caratteri minimi necessari per il titolo
+        validate_title_start_with_caps: Obbliga il titolo con una lettera maiuscola
+      constraint:
+        component_id: o specificatamente in
+        component_manifest: Solo in componenti di tipo
+        participatory_space_manifest: Applicare a spazi partecipativi di tipo
+        participatory_space_slug: Solo in
+      custom_redirect:
+        active: Attivo
+        destination: Destinazione
+        origin: Origine
+        pass_query: Passa la query string alla destinazione
+        status: Stato
+      menu:
+        position: Posizione
+        raw_label: Etichetta
+        target: Apri in
+        url: URL
+        visibility: Visibilità
+  decidim:
+    admin:
+      filters:
+        admin_accountability:
+          admin_role_type:
+            label: Tipo di ruolo
+          participatory_space_type_eq:
+            label: Tipo di spazio partecipativo
+          role:
+            label: Ruolo
+          role_type_eq:
+            label: Tipo di ruolo
+        label:
+          search_field_end_date: 'Alla data:'
+          search_field_start_date: 'Dalla data:'
+        search_placeholder:
+          user_name_or_user_email_cont: Cerca per utente o per email
+      menu:
+        admin_accountability: Responsabilità amministrativa
+        decidim_awesome: Decidim awesome
+    components:
+      awesome_iframe:
+        name: Iframe a schermo intero
+        settings:
+          global:
+            announcement: Annuncio
+            iframe: Codice iframe
+            iframe_help: 'Metti il tuo codice come html: <iframe width="100%" height="700" frameBorder="0" allowFullscreen src="..."></iframe>. Il contenuto sarà sanificato da altri tag HTML. Assicurati di utilizzare il 100% come larghezza per riempire lo schermo.'
+            viewport_width: Limita la larghezza massima alla vista dell'applicazione
+          step:
+            announcement: Annuncio
+            iframe: Codice iframe
+      awesome_map:
+        name: Mappa Awesome
+        settings:
+          global:
+            announcement: Annuncio
+            collapse: Inizia con il menu ridotto
+            map_center: Centro della mappa (Latitudine, Longitudine)
+            map_center_help: 'Usa i punti decimali (es: 41.38879, 2.15899). Lascialo vuoto affinché tutti i marcatori vengano adattati automaticamente'
+            map_height: Altezza mappa (px)
+            map_zoom: Zoom (qualsiasi numero tra 0 e 18)
+            map_zoom_help: Si applica solo se è stato definito il centro della mappa
+            menu_amendments: Mostra le correzioni
+            menu_hashtags: Mostra menu di ricerca Hashtag
+            menu_meetings: Mostra meeting
+            menu_merge_components: Fondi tutti i componenti dello stesso tipo nel menu
+            truncate: Numero massimo di caratteri per le descrizioni nei popup
+          step:
+            announcement: Annuncio
+            show_accepted: Mostra le proposte accettate
+            show_evaluating: Mostra le proposte in valutazione
+            show_not_answered: Mostra le proposte senza risposta
+            show_rejected: Mostra le proposte respinte
+            show_withdrawn: Mostra le proposte ritirate
+      proposals:
+        settings:
+          global:
+            awesome_voting_manifest: Tipo di sostegno
+            awesome_voting_manifest_help_html: <strong class="text-alert">Tieni presente che cambiare questa impostazione nel mezzo di un periodo di votazione può portare a risultati inaccurati o inattesi.</strong><br>Nota anche che questa impostazione può essere modificata solo se il componente non ha ancora sostegni.
+            awesome_voting_manifest_options:
+              default: Voto semplice (default)
+              voting_cards: Votazione con carte colorate
+            default_sort_order_options:
+              az: A-Z (alfabetico)
+              supported_first: Prima i sostegni
+              supported_last: Sostegni al fondo
+              za: Z-A (Alfabetico inverso)
+            voting_cards_box_title: Titolo del riquadro di voto
+            voting_cards_box_title_help: Il valore predefinito è "Votare su questa proposta". Usa "-" per nasconderla.
+            voting_cards_instructions: Istruzioni di supporto/aiuto (finestra modale dissmissibile)
+            voting_cards_instructions_help: Il valore predefinito è "Si prega di leggere attentamente le regole elettorali per capire come il tuo voto sarà utilizzato da %{organization}""
+            voting_cards_show_abstain: Aggiungi un'opzione di astensione
+            voting_cards_show_modal_help: Mostra le istruzioni/modalità di aiuto quando si fa clic sul supporto
+          step:
+            default_sort_order_options:
+              az: A-Z (alfabetico)
+              supported_first: Prima i sostegni
+              supported_last: Sostegni al fondo
+              za: Z-A (Alfabetico inverso)
+    decidim_awesome:
+      admin:
+        admin_accountability:
+          admin_roles:
+            admin: Super admin
+            user_manager: Gestore utenti
+          created_at: Ruolo creato il
+          currently_active: Attualmente attivo
+          deleted_user: Utente eliminato
+          email: Email
+          exports:
+            button: Esporta questa ricerca
+            export_as: Esporta come %{export_format}
+            export_format:
+              csv: CSV
+              json: JSON
+              xlsx: XLSX
+            notice: Il lavoro di esportazione è in coda. Riceverai un'email quando sarà pronto.
+          index:
+            description: Elencato qui troverai tutti gli utenti che hanno avuto un certo ruolo nell'amministrazione di uno spazio partecipativo. Gli amministratori normali non sono elencati.
+            global_description: Elencato qui troverai tutti gli utenti che hanno avuto un ruolo globale nell'amministrazione di questa organizzazione. Gli amministratori dello spazio partecipativo non sono elencati.
+            missing_users: 'NOTA: Questo elenco potrebbe non includere gli utenti creati/rimossi prima di %{date}. Questo perché la "tracciabilità dell''utente" è stata introdotta in Decidim v0.24 e questa installazione è probabilmente più vecchia.'
+            see_global: Elenca gli amministratori globali
+            see_spaces: Elenca gli amministratori dello spazio partecipativo
+            title: Responsabilità amministrativa
+          last_login: Data ultimo accesso
+          missing_info: "(informazioni mancanti)"
+          missing_user: Utente non presente nel database
+          name: Nome
+          never_logged: Non ha mai effettuato l'accesso
+          participatory_space: Spazio partecipativo
+          removal_date: Ruolo rimosso il
+          role: Ruolo
+          roles:
+            admin: Amministratore
+            collaborator: Collaboratore
+            evaluator: Valutatore
+            moderator: Moderatore
+        checks:
+          index:
+            admin_head_tags: Tag Awesome visualizzate nel header della sezione amministrativa
+            decidim-admin: Dal modulo di amministrazione
+            decidim-core: Dal modulo Core
+            decidim-proposals: Da modulo Proposte
+            decidim_version: Decidim versione %{version}
+            errors:
+              CSS: Lo Head non contiene le voci <link> del foglio di stile richieste. Per risolverlo, puoi aggiungerlo manualmente al tuo _head.html.erb personalizzato
+              JavaScript: Lo Head non contiene le voci <script> delle librerie Javascript richieste. Per risolverlo, puoi aggiungerlo manualmente al tuo admin/_head.html.erb personalizzato
+            head_tags: Tag Awesome visualizzate nel header dell'applicazione
+        config:
+          caution: 'NOTA: Questa funzione modifica pesantemente alcuni comportamenti predefiniti che potrebbero portare a risultati inattesi. Usalo con cautela!'
+          constraints:
+            add_condition: Aggiungi una condizione
+            always: Sempre
+            cannot_be_destroyed: Siamo spiacenti, questo non può essere eliminato. Questa configurazione richiede almeno un vincolo.
+            delete: Elimina
+            edit: Modifica
+            title: 'Applicabile solo in questi casi:'
+          create_proposal_custom_field:
+            error: Errore nella creazione di una nuova casella "campo personalizzato"! %{error}
+            success: 'casella "campo personalizzato" %{key} creata con successo'
+          create_scoped_admin:
+            error: Errore nella creazione di un nuovo gruppo di amministratore! %{error}
+            success: Gruppo di amministrazione %{key} creato con successo
+          create_scoped_style:
+            error: Errore nella creazione di un nuovo box CSS! %{error}
+            success: Box CSS %{key} creato correttamente
+          destroy_proposal_custom_field:
+            error: Errore nel rimuovere la casella "campo personalizzato"! %{error}
+            success: 'casella "campo personalizzato" %{key} rimossa con successo'
+          destroy_scoped_admin:
+            error: Errore nella rimozione del gruppo Admin! %{error}
+            success: Gruppo di amministrazione %{key} rimosso con successo
+          destroy_scoped_style:
+            error: Errore nella rimozione del box CSS! %{error}
+            success: Box CSS %{key} rimosso correttamente
+          form:
+            edit_label: Rinomina Etichetta
+            errors:
+              incorrect_css: 'Il box CSS #%{key} non è valido'
+              incorrect_json: 'La definizione JSON nella casella #%{key} non è valida'
+            help:
+              allow_images_in_proposals: Questo permetterà di caricare le immagini nell'editor delle proposte, disponibile per qualsiasi utente
+              auto_save_forms: Questo utilizzerà LocalStorage per salvare automaticamente i dati introdotti dagli utenti nei sondaggi e in altri moduli durante il riempimento. I dati verranno ripristinati in una visita futura con lo stesso browser nel caso in cui il modulo non venga inviato. Se il modulo viene inviato, i dati verranno rimossi. Se gli utenti rimuoveranno i dati di LocalStorage, i dati non verranno ripristinati.
+              drag_and_drop_supported: Quando si caricano le immagini, è supportato il Drag & Drop. Le immagini verranno caricate sul server e inserite come risorse esterne (non utilizza la codifica base64).
+              intergram_about: Intergram utilizza Telegram messenger per gestire un widget di chat di supporto live incorporato nella parte inferiore della pagina.
+              intergram_config: 'Invita il bot <a href="https://web.telegram.org/#/im?p=@IntergramBot">@Intergram</a> al tuo gruppo o avvia una chat direttamente con esso. <a href="https://github.com/idoco/intergram#embed-intergram-in-your-website-with-these-2-simple-steps">+ info</a>'
+              original_editor_override: Poiché dalla versione 0.26 di decidim, è gi§à possibile (solo per gli amministratori) caricare le immagini negli editor. Pertanto, le impostazioni delle immagini si applicano solo agli editor pubblici (per gli admin sono sempre disponibili).
+              proposal_custom_fields: Crea campi di proposta personalizzati che si applicano solo in alcune parti del sito (usa l'editor delle restrizioni per quello)
+              proposal_custom_fields_example: I dati sono memorizzati in un oggetto XML utilizzando attributi HTML compatibili (dl,dt,dd elementi) sostituendo il "corpo" in una proposta normale.
+              proposal_custom_fields_translations: "Label, testo di aiuto, segnaposti e valori predefiniti possono utilizzare le traduzioni personalizzate della tua applicazione. \nPer questo, invece di usare delle string literal, utilizzare il tasto i18n (deve contenere almeno un punto).\nPer esempio:\n- \"activemodel.attributes.proposal itle\" al posto di \"Titolo\"\n- \"activemodel.attributes.proposal ddress\" invece di \"Indirizzo\"\nO utilizzare le proprie chiavi in combinazione con altri strumenti per definire le traduzioni (ad esempio: utilizzando il modulo Term Customizer):\n - \"myapp.custom_fields.bio\" invece di \"Biografia\""
+              scoped_admins: Promuovi l'utente ad admin che può amministrare solo alcune parti pubbliche (usa l'editor delle restrizioni). Gli utenti che hanno già i permessi di amministrazione verranno ignorati.
+              scoped_styles: Crea CSS personalizzato che si applica solo in alcune parti del web pubblico (usa l'apposito editor delle restrizioni)
+              scoped_styles_variables: 'È possibile utilizzare le seguenti variabili CSS per i colori personalizzati dell''organizzazione:'
+              validate_body_max_caps_percent: Zero non permetterà a nessuna lettera maiuscola, 100 forzerà a scrivere tutto in lettere maiuscole
+              validate_body_max_marks_together: 'Limita il numero di punti interrogativi e esclamativi che possono essere scritti insieme. Es.: se è 2, allora ''!!!'' non sarà permesso nel testo'
+              validate_body_min_length: Questo numero può essere zero, questo renderà effettivamente questo campo non obbligatorio
+              validate_title_max_caps_percent: Zero non permetterà nessuna lettera maiuscola, 100 forzerà a scrivere tutto in lettere maiuscole
+              validate_title_max_marks_together: 'Limita il numero di punti interrogativi e esclamativi che possono essere scritti insieme. Es.: se è 2, allora ''!!!'' non sarà permesso nel testo'
+              validate_title_min_length: Il titolo è sempre obbligatorio e questo numero non può essere zero
+            validators:
+              body: Convalide dell'input dell'utente per il campo "body"
+              title: Convalide di input dell'utente per il campo "titolo"
+          form_proposal_custom_fields:
+            delete: Elimina
+            new: Aggiungi una nuova casella "campi personalizzati"
+            remove: Rimuovi questa casella "campi personalizzati"
+            sure_to_remove: Sei sicuro di voler eliminare questo campo?
+          form_proposal_private_custom_fields:
+            delete: Elimina
+          form_scoped_admins:
+            delete: Elimina
+            new: Aggiungi un nuovo gruppo "Amministratori con ambito"
+            remove: Rimuovi questo gruppo "Amministratori con ambito"
+            sure_to_remove: Sei sicuro di voler eliminare questo gruppo "Amministratori con ambito"?
+          form_scoped_styles:
+            delete: Elimina
+            remove: Rimuovi questo box CSS
+            sure_to_remove: Sei sicura di voler distruggere questo box CSS?
+          none: "⛔ Mai! - Disattiva ogni altro vincolo"
+          process_groups: Gruppi di processo
+          show:
+            title: Tweaks per %{setting}
+            update: Aggiorna la configurazione
+          system: Ovunque tranne gli spazi partecipativi
+          title:
+            admins: Amministratori con ambito
+            editors: Editor hacks
+            livechat: Chat in tempo reale
+            proposals: Proposals hacks
+            styles: Custom styles
+            surveys: Surveys & forms
+          update:
+            error: Errore nell'aggiornamento della configurazione! %{error}
+            success: Configurazione aggiornata correttamente
+        constraints:
+          create:
+            error: Errore nella creazione della condizione
+            success: Condizione creata con successo
+          destroy:
+            error: Errore nella rimozione della condizione
+            success: Condizione rimossa correttamente
+          errors:
+            not_unique: Esiste già la stessa condizione
+          new:
+            cancel: Annulla
+            constraint: Nuova condizione
+            save: Salva
+          show:
+            cancel: Annulla
+            constraint: Modifica condizione
+            save: Salva
+          update:
+            error: Errore nell'aggiornamento della condizione
+            success: Condizione aggiornata con successo
+        custom_redirects:
+          create:
+            error: Errore nella creazione del reindirizzamento! %{error}
+            success: Reindirizzamento creato correttamente
+          destroy:
+            error: Errore nella rimozione del reindirizzamento! %{error}
+            success: Reindirizzamento rimosso correttamente
+          edit:
+            save: Salva
+            title: Modifica reindirizzamento
+          form:
+            destination_help: Percorsi assoluti (iniziano con "/") o URL esterni (http://..)
+            origin_help: Sono validi solo itinerari assoluti, che iniziano con "/"
+            pass_query_help: |
+              Attiva questa opzione se vuoi che la stringa di interrogazione sia copiata nella destinazione.<br>
+              Ad esempio, se hai configurato /my-origin => /my-destination, una richiesta a /my-origin?locale=it verrà reindirizzata a "/my-destination?locale=it".
+          index:
+            check_redirections: "✔ Controlla i reindirizzamenti"
+            confirm_destroy: Sei sicuro di voler rimuovere questo reindirizzamento?
+            description: |
+              È possibile definire qualsiasi percorso (partendo da <code>/</code>) per reindirizzare qualsiasi visitatore a un URL di destinazione.<br>
+              La destinazione può essere un percorso assoluto (ie: <code>/processes/some-process</code>) o iniziare con <code>https://</code> (ie: <code>http://decidim. rg</code>)<br><br>
+              Tenete presente che un reindirizzamento funziona solo se nessun altro percorso corrisponde. Non è possibile ignorare i percorsi originali (questo è voluto per design).<br>
+              Se non si è certi, utilizzare il pulsante di reindirizzamenti per verificare le incompatibilità.
+            edit: Modifica reindirizzamento
+            new: Nuovo reindirizzamento
+            remove: Rimuovi reindirizzamento
+            title: Reindirizzamenti Personalizzati
+          new:
+            save: Salva
+            title: Nuovo reindirizzamento
+          origin_exists: La stessa origine è già configurata, si prega di modificarla invece di crearla nuovamente.
+          origin_missing: Questa origine non è stata trovata nell'elenco
+          update:
+            error: Errore nell'aggiornamento del reindirizzamento! %{error}
+            success: Reindirizzamento aggiornato correttamente
+        menu:
+          admins: Amministratori con ambito
+          custom_redirects: Reindirizzamenti Personalizzati
+          editors: Editor hacks
+          livechat: Chat in tempo reale
+          maintenance:
+            checks: System compatibility
+          menu_hacks: Menu tweaks
+          proposal_custom_fields: Campi Personalizzati Proposte
+          proposals: Proposals hacks
+          styles: Custom styles
+          surveys: Surveys & forms
+        menu_hacks:
+          create:
+            error: Errore nella creazione della voce di menu! %{error}
+            success: Elemento di menu creato con successo
+          destroy:
+            error: Errore nella rimozione della voce di menu! %{error}
+            success: Voce di menu rimossa correttamente
+          edit:
+            save: Salva
+            title: Modifica voce di menu
+          form:
+            label_help: Le traduzioni non vengono rilevate automaticamente, assicurati di compilare tutti i campi!
+            target:
+              blank: Nuova finestra
+              self: Stessa finestra
+            visibility:
+              default: Visibile
+              hidden: Sempre nascosto
+              logged: Visibile solo agli utenti registrati
+              non_logged: Visibile solo per gli utenti non registrati
+              verified_user: Visibile solo per gli utenti con un'autorizzazione valida
+          index:
+            confirm_destroy: Sei sicuro di voler rimuovere questa personalizzazione?
+            edit: Modifica
+            menu:
+              title: Menù principale
+            new: Nuova elemento
+            remove: Rimuovi aggiunta
+            remove_hack: Rimuovi personalizzazione
+          new:
+            save: Salva
+            title: Nuova voce di menu
+          update:
+            error: Errore nell'aggiornamento della voce di menu! %{error}
+            success: Voce di menu aggiornata con successo
+          url_exists: Lo stesso URL è già configurato, per favore modificalo invece di crearlo nuovamente.
+      config:
+        intergram:
+          auto_no_response: Sembra che nessuno sia a disposizione per rispondere in questo momento. Vi prego di dirci come possiamo contattarvi e torneremo a voi il prima possibile.
+          auto_response: Alla ricerca del primo admin disponibile (potrebbe richiedere un minuto)
+          intro_message: Ciao! Come possiamo aiutarti?
+          title_closed: Clicca per chattare!
+          title_open: Chattiamo!
+      content_blocks:
+        map:
+          collapse: Inizia con il menu ridotto
+          map_center: Centro della mappa (Latitudine, Longitudine)
+          map_center_help: 'Usa i punti decimali (es: 41.38879, 2.15899). Lascialo vuoto affinché tutti i marcatori vengano adattati automaticamente'
+          map_height: Altezza mappa (px)
+          map_settings: Impostazioni Mappa
+          map_zoom: Zoom (qualsiasi numero tra 0 e 18)
+          map_zoom_help: Si applica solo se è stato definito il centro della mappa
+          menu_amendments: Mostra le correzioni
+          menu_meetings: Mostra meeting
+          menu_merge_components: Fondi tutti i componenti dello stesso tipo nel menu
+          name: Mappa Awesome
+          show_accepted: Mostra le proposte accettate
+          show_evaluating: Mostra le proposte in valutazione
+          show_not_answered: Mostra le proposte senza risposta
+          show_rejected: Mostra le proposte respinte
+          show_withdrawn: Mostra le proposte ritirate
+          text_settings: Impostazioni Testo
+          title: Titolo
+          truncate: Numero massimo di caratteri per le descrizioni nei popup
+      credits: Decidim Awesome %{version} · Mantenuto con ♥️ di %{company}
+      custom_fields:
+        errors:
+          invalid_fields: Il contenuto non può essere analizzato ma è stato assegnato al campo '%{field}'
+          invalid_xml: 'Impossibile analizzare il contenuto: elementi DL/DD non trovati nell''XML'
+      editor_images:
+        create:
+          error: Errore nel caricamento dell'immagine!
+          success: Immagine caricata correttamente
+      map_component:
+        map:
+          api_not_ready: |
+            <b>Attenzione:</b> Questa installazione di Decidim ha configurato l'API ad una complessità massima di <b>%{current_complexity}</b>.
+            Questo componente probabilmente non funzionerà con questa configurazione, Si consiglia di impostare in un initializer
+            (per esempio alla fine del <code>config/initializers/decidim.rb</code>) con il seguente contenuti:<br>
+            <br>
+            <pre># Configurazione API
+            Rails.application.config.to_prepare do
+              Decidim::Api::Schema.max_complexity = 5000
+              Decidim::Api::Schema.max_depth = 50
+            end</pre>
+          error:
+            unavailable: La mappa non è disponibile. Configura la geocodifica per abilitare questo componente.
+          show:
+            view_meeting: Visualizza meeting
+            view_proposal: Visualizza proposta
+      validators:
+        too_much_caps: Sta usando troppe lettere maiuscole (oltre %{percent}% del testo)
+      voting:
+        voting_cards:
+          abstained: "✔️ Astenuti"
+          change_vote: Cambia il mio voto
+          default_box_title: Vota la proposta
+          default_instructions_html: "<p>Si prega di leggere attentamente le regole elettorali per capire come il tuo voto sarà utilizzato da %{organization}\"</p>"
+          modal:
+            cancel: Annulla
+            message: Il tuo voto sarà considerato definitivo il %{date}. Fino ad allora puoi cambiarlo
+            proceed: Procedi
+            skip: Seleziona qui per ignorare questa finestra in futuro
+          vote_button: Clicca per votare
+          voted: Votato
+          voting_for: Il mio voto su "%{proposal}" è "%{type}"
+          weights:
+            weight_0: Astensione
+            weight_0_short: 'A:'
+            weight_1: Rosso
+            weight_1_short: 'R:'
+            weight_2: Giallo
+            weight_2_short: 'G:'
+            weight_3: Verde
+            weight_3_short: 'V:'
+    meetings:
+      meetings_map:
+        view_meeting: Visualizza meeting
+    proposals:
+      proposals:
+        orders:
+          az: A-Z (alfabetico)
+          supported_first: Prima i sostegni
+          supported_last: Sostegni al fondo
+          za: Z-A (Alfabetico inverso)
+        proposal:
+          view_proposal: Visualizza proposta
+  layouts:
+    decidim:
+      decidim_awesome:
+        awesome_config:
+          amendments: Emendamenti
+          autosaved_error: LocalStorage non è supportato nel browser, il modulo non può essere salvato automaticamente.
+          autosaved_retrieved: I dati per questo modulo sono stati recuperati da una sessione precedente
+          autosaved_success: Dati salvati nella memoria locale
+          drag_and_drop_image: Aggiungi immagini trascinandole o incollandole.
+          hashtags: Hashtag
+          items: elementi
+          meetings: Meetings
+          proposals: Proposte
+          select_deselect_all: Seleziona/deseleziona tutto

@@ -1,0 +1,52 @@
+---
+
+base_locale: en
+locales: [en]
+
+data:
+  external:
+    - "<%= Bundler.rubygems.find_name('decidim-core').first.full_gem_path %>/config/locales/%{locale}.yml"
+    - "<%= Bundler.rubygems.find_name('decidim-admin').first.full_gem_path %>/config/locales/%{locale}.yml"
+    - "<%= Bundler.rubygems.find_name('decidim-proposals').first.full_gem_path %>/config/locales/%{locale}.yml"
+    - "<%= Bundler.rubygems.find_name('decidim-meetings').first.full_gem_path %>/config/locales/%{locale}.yml"
+    - "<%= Bundler.rubygems.find_name('decidim-blogs').first.full_gem_path %>/config/locales/%{locale}.yml"
+
+ignore_unused:
+  - "active_hashcash.*"
+  - "decidim.admin.actions.manage"
+  - "decidim.admin.filters.admin_accountability.*"
+  - "decidim.admin.filters.search_placeholder.*"
+  - "activemodel.attributes.constraint.*"
+  - "activemodel.attributes.custom_redirect.*"
+  - "activemodel.attributes.user.*"
+  -  activemodel.attributes.organization.awesome_admins_available_authorizations
+  -  activemodel.attributes.force_authorization.*
+  - "decidim.components.decidim_awesome.name"
+  - "decidim.components.awesome_iframe.settings.*"
+  - "decidim.components.awesome_map.settings.*"
+  - "decidim.components.proposals.settings.global.*"
+  - "decidim.components.proposals.settings.step.*"
+  - "decidim.decidim_awesome.admin.config.*"
+  - "decidim.decidim_awesome.admin.admin_accountability.*"
+  - "decidim.decidim_awesome.admin.scoped_admin_styles.*"
+  - "decidim.decidim_awesome.admin.scoped_styles.*"
+  - "decidim.decidim_awesome.admin.menu.*"
+  - "decidim.decidim_awesome.admin.menu_hacks.*"
+  - "decidim.decidim_awesome.admin.proposal_custom_fields.*"
+  - "decidim.decidim_awesome.custom_fields.*"
+  - "decidim.decidim_awesome.map_component.map.show.*"
+  - "decidim.decidim_awesome.voting.voting_cards.*"
+  - "decidim.decidim_awesome.content_blocks.*"
+  - "decidim.decidim_awesome.admin_log.*"
+  - "decidim.decidim_awesome.required_authorizations.index.verify_with_all_these_options"
+  - "decidim.decidim_awesome.required_authorizations.index.verify_with_any_of_these_options"
+  - "decidim.decidim_awesome.session.login_and_authorization_is_required"
+  - "decidim.decidim_awesome.session.authorization_is_required"
+  - "layouts.decidim.decidim_awesome.admin.maintenance.titles.*"
+  - "decidim.proposals.*"
+  - "decidim.meetings.*"
+  - "decidim.download_your_data.show.admin_actions"
+  - "decidim.download_your_data.show.awesome_private_proposals"
+
+ignore_missing:
+  - decidim.participatory_processes.scopes.global

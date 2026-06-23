@@ -1,0 +1,8 @@
+es:
+  decidim:
+    decidim_awesome:
+      admin:
+        config:
+          form:
+            home_content_block_menu:
+              title: "Menú global"
